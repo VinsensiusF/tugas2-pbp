@@ -1,6 +1,6 @@
-Link heroku untuk HTML : https://tugas3-pbp-vinsen.herokuapp.com/mywatchlist/html/
-Link heroku untuk JSON : https://tugas3-pbp-vinsen.herokuapp.com/mywatchlist/json/
-Link heroku untuk XML : https://tugas3-pbp-vinsen.herokuapp.com/mywatchlist/xml/
+Link heroku untuk HTML : https://tugas2-pbp-vinsen.herokuapp.com/mywatchlist/html/
+Link heroku untuk JSON : https://tugas2-pbp-vinsen.herokuapp.com/mywatchlist/json/
+Link heroku untuk XML : https://tugas2-pbp-vinsen.herokuapp.com/mywatchlist/xml/
 
 ![XML](https://drive.google.com/uc?export=view&id=1GiZnn0F1vKmTkP0sj9Y13UCNZEqB0tfk)
 ![JSON](https://drive.google.com/uc?export=view&id=1As4FS3oxjOTh3dkiAY9XIsnrRI446WY_)
