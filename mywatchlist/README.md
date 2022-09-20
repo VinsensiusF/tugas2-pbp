@@ -2,11 +2,9 @@ Link heroku untuk HTML : https://tugas3-pbp-vinsen.herokuapp.com/mywatchlist/htm
 Link heroku untuk JSON : https://tugas3-pbp-vinsen.herokuapp.com/mywatchlist/json/
 Link heroku untuk XML : https://tugas3-pbp-vinsen.herokuapp.com/mywatchlist/xml/
 
-![XML](https://drive.google.com/uc?export=view&id=1wm0xDZwdzt7dmaiXx_Z_7drP4N1_3HM-)
-![JSON](https://drive.google.com/uc?export=view&id=1v1YZBoOiJ5aFvvTSBJKUvNUtz7U1bRU5)
-![HTML](https://drive.google.com/uc?export=view&id=1mmCOoiq6aOO9OMvHMLeRRGYAF6Gtv494)
-
-
+![XML](https://drive.google.com/uc?export=view&id=1GiZnn0F1vKmTkP0sj9Y13UCNZEqB0tfk)
+![JSON](https://drive.google.com/uc?export=view&id=1As4FS3oxjOTh3dkiAY9XIsnrRI446WY_)
+![HTML](https://drive.google.com/uc?export=view&id=181pjr8Rw5-5d5BKt3rPizGcbmQWpRGsr)
 
 JSON merupakan 'Java Script Object Notation' yang digunakan untuk merepresentasikan object. Sesuai dengan namanya, JSON memiliki basis bahasa pemrograman yaitu, Java Script. Sementara itu, XML merupakan 'Extensible Markup Language' yang menggunakan struktur tag/penanda untuk merepresentasikan data. XML tersendiri berbasis pada SGML (Standard Generalized Markup Language) sehingga tidak terpaku pada bahasa pemrograman tertentu. Secara umum, JSON memiliki tingkat readbility yang lebih baik dari pada XML (JSON lebih mudah dibaca). Namun, tingkat keamanan data yang dikirim melalui JSON lebih rentan dari pada melalui XML. Selain itu, encoding yang digunakan pada JSON adalah UTF-8 dimana XML dapat menggunakan encoding lainnya. Selain itu, dokumentasi pada XML lebih mudah karena XML dapat memproses comment. Hal itu berbanding terbalik dengan JSON yang tidak memproses comment sehingga dokumentasi menjadi lebih sulit dilakukan.
 
