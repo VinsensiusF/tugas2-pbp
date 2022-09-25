@@ -1,10 +1,19 @@
 <form method="POST" action="/todolist/create-task/" enctype="multipart/form-data">
     {% csrf_token %}
-    <label for="title">Title: </label>
+    <h1>Tugas 4 Assignment PBP/PBD</h1>
+    <h1>Mari menambahkan ask-mu!</h1>
+    <p>Halo, {{ user.get_username }}, silahkan masukan detail task kamu!</p>
+    <table border="1">
+    <label for="title">Title:</label>
     <input id="title" type="text" name="title" value="{{ title }}">
-    
+    </table>
+
+    <table border="1"></table>
     <label for="description">Description: </label>
     <input id="description" type="text" name="description" value="{{ description }}">
+    </table>
 
+    <table border="1"></table>
     <button>Submit</button>
+    </table>
 </form>

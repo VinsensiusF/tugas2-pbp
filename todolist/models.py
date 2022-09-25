@@ -7,4 +7,4 @@ class Task(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     date = models.DateField(default=timezone.now)
     title = models.CharField(max_length=255)
-    description = models.TextField(max_length=500)
+    description = models.TextField(max_length=5000)
