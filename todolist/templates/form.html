@@ -1,0 +1,10 @@
+<form method="POST" action="/todolist/create-task/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="title">Title: </label>
+    <input id="title" type="text" name="title" value="{{ title }}">
+    
+    <label for="description">Description: </label>
+    <input id="description" type="text" name="description" value="{{ description }}">
+
+    <button>Submit</button>
+</form>

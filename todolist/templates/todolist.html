@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Tugas 4 Assignment PBP/PBD</h1>
+
+  {% if user.is_authenticated %}
+    <p>Halo, {{ user.get_username }}. Kamu sudah log in nih!</p>
+  {% endif %}
+
+  <p>Laman ini dibuat oleh:</p>
+  <h5>Name: {{nama}}</h5>
+  <h5>Student ID: {{npm}}</h5>
+  
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for task in list_task %}
+    <tr>
+        <th>{{task.user}}</th>
+        <th>{{task.date}}</th>
+        <th>{{task.title}}</th>
+        <th>{{task.description}}</th>
+    </tr>
+  {% endfor %}
+  </table>
+
+  <button><a href="{% url 'todolist:create-task' %}">Add Task</a></button>
+  <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+  {% endblock content %}
