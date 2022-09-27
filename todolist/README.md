@@ -1,3 +1,14 @@
+Link heroku tugas ini:
+Home : https://tugas2-pbp-vinsen.herokuapp.com/todolist/ (wajib login)
+Login : https://tugas2-pbp-vinsen.herokuapp.com/todolist/login
+register : https://tugas2-pbp-vinsen.herokuapp.com/todolist/register
+Membuat Task : https://tugas2-pbp-vinsen.herokuapp.com/todolist/create-task/ (wajib login)
+
+Akun yang dibuat:
+1. username : vinsen | password : AnakKuda123
+2. username : sapi | password : AnakKuda123
+Setiap akun memiliki 3 dummy data buku
+
 Fungsi dari tag {% csrf_token %} merupakan sebuah implementasi untuk melindungi program yang dibuat terhadap serangan dari luar. Tag tersebut akan membuat token CSRF pada server pada saat melakukan rendering suatu laman. CRSF Token tersebut akan dicek secara terus menerus sebelum memproses request yang datang dari user. Dengan kata lain, akses laman tanpa adanya CSRF token akan membatalkan eksekusi code yang akan memproses laman sebagai respon pada user. (Sumber info: https://www.educative.io/answers/what-is-a-csrf-token-in-django dan django documentation)
 
 Seperti yang kita tahu, tag {{ form.as_table }} akan melakukan rendering for yang kita buat ke dalam sebuah bentuk tabel yang diawali "<tr>" dan diakhiri "</tr>" pada template yang kita rancang. Akan tetapi, penggunaan tag {{ form.as_table }} DAPAT kita abaikan dan tidak gunakan apabila kita akan membuat sebuah form dan menyusun strukturnya secara mandiri. untuk menyusun struktur form secara manual adalah sebagai berikut:
