@@ -1,0 +1,140 @@
+.title{
+    color : #92A8D1;
+    font: georgia;
+    font-size: x-large;
+    text-align: center;
+    margin: auto;
+}
+
+.sapaan{
+    color: #55b4b0;
+    font: georgia;
+    font-size: x-large;
+    text-align: center;
+    margin: auto;
+}
+
+.pembuat{
+    color: #55b4b0;
+    font: georgia;
+    font-size: x-large;
+    text-align: center;
+    margin: auto;
+}
+
+.nama{
+    color: #55b4b0;
+    font: georgia;
+    font-size: x-large;
+    text-align: center;
+    margin: auto;
+}
+
+.npm{
+    color: #55b4b0;
+    font: georgia;
+    font-size: x-large;
+    text-align: center;
+    margin: auto;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 5px 5px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {
+    margin: 0 -5px;
+ }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .card {
+    size: 5cm;
+    color: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(3, 28, 250, 0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
+
+.add{
+  background-color: rgb(151, 248, 151);
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 0.5px solid black;
+  border-radius:10px;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+
+}
+.add:hover{
+    background-color:#25fc03;
+    transition: 0.7s;
+}
+
+.logout{
+  background-color: rgb(208, 111, 111);
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 0.5px solid black; 
+  border-radius:10px;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+.logout:hover{
+    background-color:#f71703;
+    transition: 0.7s;
+}
+
+.divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
+}
+
+.buttons{
+    display:inline-block;
+    display: flex;
+    justify-content: center;
+}

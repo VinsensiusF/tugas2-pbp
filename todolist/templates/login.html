@@ -4,6 +4,11 @@
 <title>Login</title>
 {% endblock meta %}
 
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css'%}">
+</head>
+
 {% block content %}
 
 <div class = "login">
@@ -14,7 +19,7 @@
         {% csrf_token %}
         <table>
             <tr>
-                <td>Username: </td>
+                <td class="username">Username: </td>
                 <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
             </tr>
                     

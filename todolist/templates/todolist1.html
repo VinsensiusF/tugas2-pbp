@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'todolist.css'%}">
+</head>
+
+<body>
+    <h1 class="title">Tugas 5 Assignment PBP/PBD</h1>
+
+    {% if user.is_authenticated %}
+        <p class="sapaan">Halo, {{ user.get_username }}. Kamu sudah log in nih!</p>
+    {% endif %}
+
+    <p class="pembuat">Laman ini dibuat oleh:</p>
+    <h5 class="nama">Name: {{nama}}</h5>
+    <h5 class="npm">Student ID: {{npm}}</h5>
+    
+    {% comment %} Add the data below this line {% endcomment %}
+    <div class="row">
+        {% for task in list_task %}
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <h4><b>{{task.user}}</b></h4>
+                    <h5>{{task.date}}</h5>
+                    <h5><b>{{task.title}}</b></h5>
+                    <p>{{task.description}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </body>
+
+    <div class="buttons">
+        <button class="add"><a href="{% url 'todolist:create-task' %}">Add Task</a></button>
+        <div class="divider"></div>
+        <button class="logout"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </div>
+
+</body>
+</html>

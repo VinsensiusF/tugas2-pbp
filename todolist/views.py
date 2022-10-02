@@ -30,7 +30,7 @@ def show_task(request):
         'npm': '2106751221',
         'last_login': request.COOKIES['last_login'],
     }
-    return render(request, "todolist.html", context)
+    return render(request, "todolist1.html", context)
 
 def register(request):
     form = UserCreationForm()
