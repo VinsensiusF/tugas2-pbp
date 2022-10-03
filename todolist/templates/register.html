@@ -1,24 +1,30 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    {% block meta %}
+    <title>Registrasi Akun</title>
+    {% endblock meta %}
 
-{% block meta %}
-<title>Registrasi Akun</title>
-{% endblock meta %}
+    {% block content %} 
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
 
-{% block content %}  
-
-<div class = "login">
-    
-    <h1>Formulir Registrasi</h1>  
-
+<body> 
+    <div class="text-center">
+        <h2 class="text-success">Formulir Registrasi</h2>  
+    </div>
         <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
+                {% csrf_token %}  
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <table>  
+                        {{ form.as_table }}  
+                    </table>  
+                    <td><input class="btn btn-success btn-lg btn-block" type="submit" value="Daftar"></td>
+                </div>
+            </div>
         </form>
 
     {% if messages %}  
@@ -29,6 +35,9 @@
         </ul>   
     {% endif %}
 
-</div>  
 
-{% endblock content %}
+
+    {% endblock content %}
+</body>
+
+</html>

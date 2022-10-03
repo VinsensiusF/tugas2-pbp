@@ -1,19 +1,31 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
 <form method="POST" action="/todolist/create-task/" enctype="multipart/form-data">
     {% csrf_token %}
-    <h1>Tugas 4 Assignment PBP/PBD</h1>
-    <h1>Mari menambahkan task-mu!</h1>
-    <p>Halo, {{ user.get_username }}, silahkan masukan detail task kamu!</p>
-    <table border="1">
-    <label for="title">Title:</label>
-    <input id="title" type="text" name="title" value="{{ title }}">
-    </table>
-
-    <table border="1"></table>
-    <label for="description">Description: </label>
-    <input id="description" type="text" name="description" value="{{ description }}">
-    </table>
-
-    <table border="1"></table>
-    <button>Submit</button>
-    </table>
+    <div class="text-center">
+        <h2 class="text-success">Tugas 4 Assignment PBP/PBD</h1>
+        <h4 class="text-secondary">Halo, <mark>{{ user.get_username }}</mark>, Mari menambahkan task-mu!</h2>
+        <h6 class="text-secondary">Silahkan masukan detail task kamu!</h5>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+        <table>
+            <tr>
+                <td><b>Judul:</b> </td>
+                <td><input id="title" type="text" name="title" placeholder="Judul Tugas" value="{{ title }}"></td>
+            </tr>
+            <tr>
+                <td><b>Deskripsi: </b></td>
+                <td><input id="description" type="text" name="description" placeholder="Deskripsi" value="{{ description }}"></td>
+            </tr>
+        </table>
+        <button class="btn btn-success btn-lg btn-block"><b>Buat Tugas</b></button>
+        </div>
+    </div>
+    
+    
 </form>

@@ -1,40 +1,47 @@
-{% extends 'base.html' %}
-
- {% block content %}
- <head>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'todolist.css'%}">
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 
-  <h1 class="title">Tugas 4 Assignment PBP/PBD</h1>
-
-  {% if user.is_authenticated %}
-    <p>Halo, {{ user.get_username }}. Kamu sudah log in nih!</p>
-  {% endif %}
-
-  <p>Laman ini dibuat oleh:</p>
-  <h5>Name: {{nama}}</h5>
-  <h5>Student ID: {{npm}}</h5>
-  
-  <table border="1">
-    <tr>
-      <th>Username</th>
-      <th>Date</th>
-      <th>Title</th>
-      <th>Description</th>
-    </tr>
+<body>
+    <div class="text-center">
+        <h1 class="text-success"><strong> Tugas 5 Assignment PBP/PBD</strong></h1>
+        {% if user.is_authenticated %}
+            <h2 class="text-secondary">Halo, <mark>{{ user.get_username }}</mark>. Kamu sudah log in nih!</h2>
+        {% endif %}
+        <div class="container-fluid bg-success">
+            <h3 class="text-light">Laman ini dibuat oleh:</h3>
+            <h5 class="text-light">Name: {{nama}}</h5>
+            <h5 class="text-light">Student ID: {{npm}}</h5>
+        </div>
+    </div>
+    
     {% comment %} Add the data below this line {% endcomment %}
-    {% for task in list_task %}
-    <tr>
-        <th>{{task.user}}</th>
-        <th>{{task.date}}</th>
-        <th>{{task.title}}</th>
-        <th>{{task.description}}</th>
-    </tr>
-  {% endfor %}
-  </table>
+    <div class="row">
+        {% for task in list_task %}
+        <div class="col mt-2 ml-2 mb-2 mr-2">
+            <div class="card text-white bg-dark" style="width: 18rem;">
+                <div class="container">
+                    <div class="text-center bg-success">
+                        <h5 class="namaUser"><b>{{task.user}}</b></h4>
+                        <h7 class="tanggal">{{task.date}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="judul"><b>{{task.title}}</b></h5>
+                        <p class="description">{{task.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </body>
 
-  <button><a href="{% url 'todolist:create-task' %}">Add Task</a></button>
-  <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    <button type="button" class="btn btn-success btn-lg btn-block "><a href="{% url 'todolist:create-task' %}"><b>Add Task</b></a></button>
+    <button type="button" class="btn btn-warning btn-lg btn-block"><a href="{% url 'todolist:logout' %}"><b>Logout</b></a></button>
 
-  {% endblock content %}
+</body>
+</html>
