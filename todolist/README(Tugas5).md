@@ -1,3 +1,6 @@
+Link heroku tugas ini:
+Home : https://tugas2-pbp-vinsen.herokuapp.com/todolist/ (wajib login)
+
 Inline CSS
 Inline CSS merupakan penggunaan CSS dimana kode CSS dituliskan secara langsung pada atribut elemen yang ada di HTML.
 Kelebihan Inline CSS adalah dapat dimanfaatkan saat live-coding sehingga perubahan elemen yang di-edit akan dapat langsung terlihat, dan pemrosesan request akan lebih cepat karena tidak perlu meng-import CSS dari file lain sehingga, load website lebih cepat dan responsif
