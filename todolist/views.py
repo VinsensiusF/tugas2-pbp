@@ -1,3 +1,4 @@
+from re import T
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
@@ -12,10 +13,17 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.http import HttpResponse, JsonResponse
+from django.core import serializers
 
 # Create your views here.
 def get_success_url():
     return reverse('')
+
+def show_json(request):
+    data = Task.objects.all()
+    task_item = data.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", task_item), content_type="application/json")
 
 @login_required(login_url='/todolist/login/')
 def show_task(request):
@@ -30,7 +38,7 @@ def show_task(request):
         'npm': '2106751221',
         'last_login': request.COOKIES['last_login'],
     }
-    return render(request, "todolist.html", context)
+    return render(request, "todolist_ajax.html", context)
 
 def register(request):
     form = UserCreationForm()
@@ -81,3 +89,23 @@ def add_task(request):
         form = TaskForm()
 
     return render(request, 'form.html', {'form': form})
+
+def todolist_ajax(request):
+    context = {
+        'nama': 'Vinsensius Ferdinando',
+        'npm': '2106751221',
+        'last_login': request.COOKIES['last_login'],
+    }
+    return render(request, "todolist_ajax.html", context)
+
+def todolist_ajax_submit(request):
+    if (request.method == "POST"):
+        form = TaskForm(request.POST or None)
+        if (form.is_valid()):
+            user = request.user
+            title = form.cleaned_data['title']
+            description = form.cleaned_data['description']
+            new_todolist_item = Task.objects.create(user=user, title=title, description=description)
+            return JsonResponse({'title':title,
+                                'description':description
+                                })
