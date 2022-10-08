@@ -28,9 +28,6 @@ def show_json(request):
 @login_required(login_url='/todolist/login/')
 def show_task(request):
     task_item = Task.objects.all()
-    # for task in task_item:
-    #     if task.user == request.user:
-    #         total_watched+=1
     task_item = task_item.filter(user=request.user)
     context = {
         'list_task': task_item,
@@ -90,6 +87,7 @@ def add_task(request):
 
     return render(request, 'form.html', {'form': form})
 
+@login_required(login_url='/todolist/login/')
 def todolist_ajax(request):
     context = {
         'nama': 'Vinsensius Ferdinando',
@@ -98,6 +96,7 @@ def todolist_ajax(request):
     }
     return render(request, "todolist_ajax.html", context)
 
+@login_required(login_url='/todolist/login/')
 def todolist_ajax_submit(request):
     if (request.method == "POST"):
         form = TaskForm(request.POST or None)
